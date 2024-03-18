@@ -1,0 +1,32 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "QP HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Tab 1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("This Not Auto Tp ")
+Tab:AddLabel("https://discord.com/invite/hyPPEPCGKf")
+Tab:AddLabel("Sub to ScriptsQP")
+
+Tab:AddButton({
+	Name = "Pray TP",
+	Callback = function()
+      		local player = game.Players.LocalPlayer local workspace = game:GetService("Workspace")
+
+for _,v in pairs(workspace:GetChildren()) do if v.Name == "Pray" then player.Character.HumanoidRootPart.CFrame = v.CFrame end end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "GwaGwa TP",
+	Callback = function()
+      		local player = game.Players.LocalPlayer local workspace = game:GetService("Workspace")
+
+for _,v in pairs(workspace:GetChildren()) do if v.Name == "GwaGwa" then player.Character.HumanoidRootPart.CFrame = v.CFrame end end
+  	end    
+})
+
+OrionLib:Init()
